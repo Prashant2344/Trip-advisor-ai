@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import AudioPlayer from './AudioPlayer'
 
 const ImageAnalysis = () => {
   const [imageUrl, setImageUrl] = useState('')
@@ -108,7 +109,7 @@ const ImageAnalysis = () => {
           requestBody = { imageBase64: base64 }
           
           try {
-            const response = await fetch('/api/image', {
+            const response = await fetch('/api/image-analysis', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -135,7 +136,7 @@ const ImageAnalysis = () => {
         // Use URL
         requestBody = { imageUrl: imageUrl.trim() }
         
-        const response = await fetch('/api/image', {
+        const response = await fetch('/api/image-analysis', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -331,6 +332,10 @@ const ImageAnalysis = () => {
                   {line}
                 </p>
               ))}
+            </div>
+            
+            <div className="image-audio-section">
+              <AudioPlayer text={analysis.replace('Image Analysis: ', '')} className="image-audio" />
             </div>
           </div>
         </div>

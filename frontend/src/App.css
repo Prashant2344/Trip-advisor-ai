@@ -84,6 +84,165 @@ body {
   padding: 0;
 }
 
+/* Audio Player styles */
+.audio-player {
+  margin-top: 30px;
+  padding: 25px;
+  background: #f8fafc;
+  border-radius: 15px;
+  border: 1px solid #e2e8f0;
+}
+
+.audio-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.voice-selector {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.voice-label {
+  font-weight: 600;
+  color: #374151;
+  min-width: 80px;
+}
+
+.voice-select {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: white;
+  color: #374151;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.voice-select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.control-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.convert-btn, .play-btn, .stop-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 140px;
+}
+
+.convert-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.convert-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.convert-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.play-btn {
+  background: #10b981;
+  color: white;
+}
+
+.play-btn:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+.stop-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.stop-btn:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+.audio-info {
+  margin-top: 20px;
+  padding: 15px;
+  background: #d1fae5;
+  border: 1px solid #a7f3d0;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.audio-ready {
+  color: #065f46;
+  font-weight: 600;
+  margin: 0;
+}
+
+.audio-player .error {
+  margin-top: 15px;
+  padding: 12px;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  color: #dc2626;
+}
+
+.quota-help {
+  margin-top: 15px;
+  padding: 15px;
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  color: #92400e;
+}
+
+.quota-help h4 {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  color: #78350f;
+}
+
+.quota-help ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.quota-help li {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+/* Travel and Image specific audio sections */
+.travel-audio {
+  margin-top: 20px;
+}
+
+.image-audio-section {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 15px;
+  border: 1px solid #e2e8f0;
+}
+
 /* Form styles */
 .travel-form-container {
   padding: 40px 30px;
